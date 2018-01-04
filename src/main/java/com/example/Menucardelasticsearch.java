@@ -1,30 +1,33 @@
 package com.example;
 
-import javax.persistence.Id;
+//import javax.persistence.Id;
 import java.lang.annotation.Documented;
-import org.springframework.data.elasticsearch.annotations.Document;
 
-@Document(indexname="hit",type="food",shards=1,replicas=0)
+import org.springframework.data.annotation.Id;
+import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+
+@Document(indexName = "hit",type="food",shards=1,replicas=0)
 public class Menucardelasticsearch {
-    @Id
-    private String id;
+@Id
+    private int id;
     private String name;
     private int price;
 
     public Menucardelasticsearch() {
     }
 
-    public Menucardelasticsearch(String id, String name, int price) {
+    public Menucardelasticsearch(int id, String name, int price) {
         this.id = id;
         this.name = name;
         this.price = price;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -6,10 +6,10 @@ import jnr.ffi.annotations.In;
 import org.springframework.data.cassandra.mapping.PrimaryKey;
 import org.springframework.data.cassandra.mapping.Table;
 
-import javax.persistence.Entity;
 
-@Entity
-@Table
+
+
+@Table("Restaurant")
 public class Menu_card {
     @PrimaryKey
     private Integer id;
