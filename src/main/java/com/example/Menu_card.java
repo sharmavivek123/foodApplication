@@ -1,7 +1,6 @@
 package com.example;
 
 
-//import org.springframework.boot.orm.jpa.EntityScan;
 import jnr.ffi.annotations.In;
 import org.springframework.data.cassandra.mapping.PrimaryKey;
 import org.springframework.data.cassandra.mapping.Table;
